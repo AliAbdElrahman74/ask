@@ -28,6 +28,15 @@ module Ask
       g.fixture_replacement :factory_girl, :dir => "spec/factories"
     end
 
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*',
+         :headers => :any,
+         :expose => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+         :methods => [:get, :post, :patch, :delete, :options, :put]
+      end
+    end
     config.api_only = true
   end
 end

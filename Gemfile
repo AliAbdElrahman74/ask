@@ -14,6 +14,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-generators', '~> 3.3.4'
 gem 'jquery-rails'
 gem 'record_tag_helper', '~> 1.0'
+gem 'devise_token_auth'
+gem 'rack-cors', :require => 'rack/cors'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
